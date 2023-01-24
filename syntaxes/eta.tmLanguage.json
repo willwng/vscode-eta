@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Eta",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#functions"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.eta",
+          "match": "\\b(if|while|return|use|else|break|continue|new|class)\\b"
+        },
+        {
+          "name": "keyword.operator.highmultiply",
+          "match": "(\\*>>)"
+        },
+        {
+          "match": "(==|!=|<=|>=|<>|<|>)",
+          "name": "keyword.operator.comparison"
+        },
+        {
+          "name": "keyword.operator.arithmetic",
+          "match": "(\\-|\\+|\\*|\\/|%)"
+        },
+        {
+          "name": "keyword.operator.assignment",
+          "match": "(=)"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.eta",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.eta",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line",
+          "match": "//(.*)"
+        },
+        {
+          "name": "comment.block",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric",
+          "match": "(?x)\n(?<!\\$)\n(\n  \\b[0-9]([0-9_]*[0-9])?\\.\\B(?!\\.)\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([Ee][+-]?[0-9]([0-9_]*[0-9])?)[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([0-9]([0-9_]*[0-9])?)([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]?\\b\n  |\n  (?<!\\.)\\B\\.[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]\\b\n  |\n  \\b(0|[1-9]([0-9_]*[0-9])?)(?!\\.)[Ll]?\\b\n)\n(?!\\$)"
+        },
+        {
+          "name": "constant.language",
+          "match": "\\b(true|false|null|this)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type",
+          "match": "\\b(int|bool)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "begin": "([A-Za-z_$][\\w$]*)\\s*(\\()",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function"
+            }
+          },
+          "end": "\\)",
+          "patterns": [
+            {
+              "include": "#functions"
+            },
+            {
+              "include": "text.eta"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "scopeName": "text.eta"
+}
