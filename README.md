@@ -13,6 +13,7 @@ Adds language support for the Eta language to VSCode. See the [Eta Language Spec
 ## Features
 * Syntax highlighting of keywords, comments
 * Autocomplete for strings, arrays, braces
+* Code snippets for library interfaces
 
 ## Planned features
 - [ ] IntelliSense support

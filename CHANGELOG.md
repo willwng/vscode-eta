@@ -9,3 +9,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Initial release
 - Basic syntax highlighting
 - Bracket/string autocomplete
+
+## [v0.0.3]
+
+- Add code snippets for library interfaces

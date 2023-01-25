@@ -12,19 +12,35 @@
     "vscode": "^1.12.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages", "Snippets"
   ],
   "contributes": {
-    "languages": [{
-      "id": "eta",
-      "aliases": ["Eta", "eta"],
-      "extensions": [".eta",".eti"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "eta",
-      "scopeName": "text.eta",
-      "path": "./syntaxes/eta.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "eta",
+        "aliases": [
+          "Eta",
+          "eta"
+        ],
+        "extensions": [
+          ".eta",
+          ".eti"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "eta",
+        "scopeName": "text.eta",
+        "path": "./syntaxes/eta.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "eta",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
   }
 }
