@@ -2,7 +2,7 @@
   "name": "vscode-eta",
   "displayName": "vscode-eta",
   "description": "VSCode Eta language support",
-  "version": "0.1.0",
+  "version": "0.0.5",
   "publisher": "wackymaster",
   "icon": "icon.png",
   "repository": {

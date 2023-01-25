@@ -10,6 +10,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Basic syntax highlighting
 - Bracket/string autocomplete
 
-## [v0.0.3]
+## [v0.0.5]
 
 - Add code snippets for library interfaces
