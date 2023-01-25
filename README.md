@@ -6,6 +6,8 @@
 
 Adds language support for the Eta language to VSCode. See the [Eta Language Specification](https://www.cs.cornell.edu/courses/cs4120/2023sp/project/language.pdf)
 
+![example](https://user-images.githubusercontent.com/8275672/214674645-76d2130b-e122-47c2-8837-c985daaa9dd7.png)
+
 
 
 
