@@ -1,0 +1,53 @@
+{
+	"Print a string to standard output": {
+		"prefix": "print",
+		"body": [
+			"print($1)",
+		],
+		"description": "Print a string to standard output"
+	},
+	"Print a string to standard output, followed by a newline": {
+		"prefix": "println",
+		"body": [
+			"println($1)",
+		],
+		"description": "Print a string to standard output, followed by a newline"
+	},
+	"Read from standard input followed by a newline": {
+		"prefix": "readln()",
+		"body": [
+			"readln()",
+			"$1"
+		],
+		"description": "Read from standard input until a newline"
+	},
+	"Read a single character from standard input": {
+		"prefix": "getchar()",
+		"body": [
+			"getchar()",
+			"$1"
+		],
+		"description": "Read a single character from standard input"
+	},
+	"Test for end of file on standard input": {
+		"prefix": "eof()",
+		"body": [
+			"eof()",
+		],
+		"description": "Test for end of file on standard input"
+	},
+	"Parse integer from string": {
+		"prefix": "parseInt()",
+		"body": [
+			"parseInt($1)",
+		],
+		"description": "Parse integer from string"
+	},
+	"Return a sequence of ASCII characters representing the integer n": {
+		"prefix": "parseInt()",
+		"body": [
+			"unparseInt($1)",
+		],
+		"description": "Return a sequence of ASCII characters representing the integer n"
+	},
+}
